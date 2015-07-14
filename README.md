@@ -4,6 +4,16 @@ Youtube Component - Build youtube Iframe API and State Change Events in Object O
 Usage is as easy as init a function. 
 The youtube has included necessary tracker in each event state.
 
+## Installation 
+
+A div tag with ID, the ID is required when initalizing the ytComponent 
+
+    <div id="yt_frame"></div>
+
+Import the js file 
+
+    <script src="js/ninjoe.ytComponent.js"></script>
+
 ## Usage
 
 ### Basic Usage 
