@@ -18,5 +18,18 @@
         <div id="yt_frame"></div>
     </div>
     <script src="js/ninjoe.ytComponent.js"></script>
+    <script>
+        /* Init */
+        var  app = new ytComponent({
+            'container' : 'yt_frame',
+            'width' : '640',
+            'height' : '390',
+            'videoId' : '1SBxsv_T_Jw'
+        });
+        /* Required Function by Youtube Iframe API */
+        function onYouTubeIframeAPIReady() {
+            app.loadVideo();
+        }
+    </script>
 </body>
 </html>

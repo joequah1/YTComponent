@@ -154,15 +154,3 @@ ytComponent.prototype.videoPlayLength = function () {
     }
     
 };
-
-/* Init */
-var  app = new ytComponent({
-    'container' : 'yt_frame',
-    'width' : '640',
-    'height' : '390',
-    'videoId' : '1SBxsv_T_Jw'
-});
-/* Required Function by Youtube Iframe API */
-function onYouTubeIframeAPIReady() {
-    app.loadVideo();
-}
