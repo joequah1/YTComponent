@@ -6,6 +6,8 @@ The youtube has included necessary tracker in each event state.
 
 ## Usage
 
+### Basic Usage 
+
 Initialize the ytComponent 
 
     var  app = new ytComponent({
@@ -24,6 +26,8 @@ Include the onYouTubeIframeAPIReady function after initializing ytComponent
 This function is required for Youtube Iframe API, the API will call to this function when the page has finished download the Javascript for the player API.
 Do remember to change the variable named app if necessary. 
 
+### Tracking 
+
 To track for each event state
 
     var tracker = function (type) {
@@ -37,7 +41,9 @@ To track for each event state
         'videoId' : 'M7lc1UVf-VE',
         'tracker' : tracker
     });
-    
+
+### Autoplay 
+
 To autoplay youtube video, autoplay will only works in desktop browser
 
     var  app = new ytComponent({
