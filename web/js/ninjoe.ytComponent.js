@@ -91,13 +91,13 @@ ytComponent.prototype.onPlayerStateChange = function (event) {
     if (event.data == -1) {
         
         /* tracking */
-        this.tracker('unstarted');
+        this.tracker('E', 'unstarted');
     } else if (event.data == 0) {
         /* next play is replay */
         this.replay = true;
         
         /* tracking */
-        this.tracker('end');
+        this.tracker('E', 'end');
     } else if (event.data == 1) {
         
         /* tracking */
@@ -105,16 +105,16 @@ ytComponent.prototype.onPlayerStateChange = function (event) {
             /* Start RealTime */
             this.realTime = setInterval(this.curry(this.videoPlayLength, this), 100);
             
-            this.tracker('playing');
+            this.tracker('E', 'playing');
         } else {
-            this.tracker('replay');
+            this.tracker('E', 'replay');
         }
     } else if (event.data == 2) {
         
         /* Clear RealTime */
         clearInterval(this.realTime);
         /* tracking */
-        this.tracker('paused');
+        this.tracker('E', 'paused');
     }
 };
 
@@ -137,13 +137,13 @@ ytComponent.prototype.videoPlayLength = function () {
     
     if (perc == 25 && this.playTimeDone.indexOf(perc) == -1) {
         /* tracking */
-        this.tracker('play_75');
+        this.tracker('E', 'play_25');
     } else if (perc == 50 && this.playTimeDone.indexOf(perc) == -1) {
         /* tracking */
-        this.tracker('play_75');
+        this.tracker('E', 'play_50');
     } else if (perc == 75 && this.playTimeDone.indexOf(perc) == -1) {
         /* tracking */
-        this.tracker('play_75');
+        this.tracker('E', 'play_75');
     }
     this.playTimeDone.push(perc);
     
