@@ -98,6 +98,22 @@ ytComponent.prototype.onPlayerStateChange = function (event) {
         
         /* tracking */
         this.tracker('E', 'end');
+        
+        /* skip tracking */
+        if (this.playTimeDone.indexOf(25) == -1 || this.playTimeDone.indexOf(50) == -1 || this.playTimeDone.indexOf(75) == -1) {
+            this.tracker('E', 'skip');
+            
+            if (this.playTimeDone.indexOf(25) == -1) {
+                this.tracker('E', 'play_25');
+            }
+            if (this.playTimeDone.indexOf(50) == -1) {
+                this.tracker('E', 'play_50');
+            }
+            if (this.playTimeDone.indexOf(75) == -1) {
+                this.tracker('E', 'play_75');
+            }
+        }
+        
     } else if (event.data == 1) {
         
         /* tracking */

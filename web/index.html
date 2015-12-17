@@ -24,7 +24,10 @@
             'container' : 'yt_frame',
             'width' : '640',
             'height' : '390',
-            'videoId' : '1SBxsv_T_Jw'
+            'videoId' : '1SBxsv_T_Jw',
+            'tracker' : function (c, t) {
+                console.log(c + ' ' + t);
+            }
         });
         /* Required Function by Youtube Iframe API */
         function onYouTubeIframeAPIReady() {
