@@ -88,11 +88,7 @@ ytComponent.prototype.onPlayerStateChange = function (event) {
     5 – video cued
     */
     
-    if (event.data == -1) {
-        
-        /* tracking */
-        this.tracker('E', 'unstarted');
-    } else if (event.data == 0) {
+    if (event.data == 0) {
         /* next play is replay */
         this.replay = true;
         
